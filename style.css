@@ -41,8 +41,8 @@ body {
   padding-top: 24px;
 }
 .header__button {
+  display: block;
   width: 247px;
-  height: 66px;
   box-sizing: border-box;
   border: 1px solid rgb(32, 32, 39);
   border-radius: 60px;
@@ -53,6 +53,7 @@ body {
   font-weight: 600;
   line-height: 141.69%;
   margin-top: 48px;
+  padding: 16px 0px 16px 65px;
 }
 
 .main {
@@ -135,8 +136,8 @@ body {
   font-size: 24px;
   font-weight: 600;
   line-height: 29px;
-  height: 150px;
   background: rgb(189, 237, 53);
   text-align: center;
   padding-top: 61px;
+  padding-bottom: 61px;
 }/*# sourceMappingURL=style.css.map */
