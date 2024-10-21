@@ -5,6 +5,7 @@
 
 a {
     text-decoration: none;
+    color: #000;
 }
 
 body {
@@ -29,10 +30,6 @@ body {
     background: url(img/str_big.svg) no-repeat right top, url(img/Star_2.svg) no-repeat 4% 12%, url(img/Star_3.svg) no-repeat 11% 9%, url(img/Star_4.svg) no-repeat 75% 79%, url(img/Star_5.svg) no-repeat 67% 71%;
     background-color: rgb(225, 255, 143);
 
-
-
-
-
     &__heading {
         color: rgb(32, 32, 39);
         font-size: 64px;
@@ -53,8 +50,8 @@ body {
     }
 
     &__button {
+        display: block;
         width: 247px;
-        height: 66px;
 
         box-sizing: border-box;
         border: 1px solid rgb(32, 32, 39);
@@ -68,11 +65,16 @@ body {
         line-height: 141.69%;
 
         margin-top: 48px;
+        padding: 16px 0px 16px 65px;
+
     }
 }
 
 .main {
-    background: rgb(32, 32, 39);
+
+    background: url(img/star_11.svg) no-repeat 2% 54%, url(img/star_12.svg) no-repeat 3% 58%, url(img/star_1.svg) no-repeat right 12%;
+    background-color: rgb(32, 32, 39);
+
 }
 
 .nav {
@@ -82,6 +84,7 @@ body {
         font-weight: 700;
         line-height: 78px;
         padding-top: 94px;
+
     }
 
     &__text {
@@ -90,6 +93,83 @@ body {
         font-weight: 400;
         line-height: 32px;
         margin-top: 24px;
-        max-width: 700px;
+        margin-bottom: 72px;
+        max-width: 760px;
     }
+
+    &__menu {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 32px;
+        padding-bottom: 50px;
+    }
+
+    &__game-cart {
+        border-radius: 30px;
+        background-color: #fff;
+        height: 551px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-self: flex-start;
+
+        &_top {
+            height: 473px;
+        }
+
+        &_bottom {
+            height: 551px;
+        }
+
+        &_center {
+            height: 512px;
+            align-self: flex-end;
+        }
+    }
+
+
+
+    &__game-img {
+        border-radius: 30px;
+    }
+
+    &__game-number {
+        color: rgb(32, 32, 39);
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 110%;
+
+        border-radius: 52.58px;
+        box-sizing: border-box;
+        background: rgb(247, 247, 247);
+        border: none;
+        width: 108px;
+        height: 36px;
+        margin-top: 32px;
+        margin-left: 32px;
+    }
+
+    &__game-name {
+        color: rgb(32, 32, 39);
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 39px;
+        padding-top: 16px;
+        max-width: 300px;
+        margin-left: 32px;
+    }
+
+
+}
+
+.footer {
+    color: rgb(0, 0, 0);
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 29px;
+    background: rgb(189, 237, 53);
+    text-align: center;
+    padding-top: 61px;
+    padding-bottom: 61px;
 }
