@@ -15,10 +15,7 @@ body {
 .center {
     padding-left: calc(50% - 600px);
     padding-right: calc(50% - 600px);
-
 }
-
-
 
 .header {
     height: 800px;
@@ -27,7 +24,7 @@ body {
     background-position: center;
     background-size: cover;
 
-    background: url(img/str_big.svg) no-repeat right top, url(img/Star_2.svg) no-repeat 4% 12%, url(img/Star_3.svg) no-repeat 11% 9%, url(img/Star_4.svg) no-repeat 75% 79%, url(img/Star_5.svg) no-repeat 67% 71%;
+    background: url(img/star_big.svg) no-repeat right top, url(img/Star_2.svg) no-repeat 4% 12%, url(img/Star_3.svg) no-repeat 11% 9%, url(img/Star_4.svg) no-repeat 75% 79%, url(img/Star_5.svg) no-repeat 67% 71%;
     background-color: rgb(225, 255, 143);
 
     &__heading {
@@ -54,7 +51,6 @@ body {
         width: 247px;
 
         box-sizing: border-box;
-        border: 1px solid rgb(32, 32, 39);
         border-radius: 60px;
         background: rgb(32, 32, 39);
 
@@ -63,18 +59,52 @@ body {
         font-size: 24px;
         font-weight: 600;
         line-height: 141.69%;
+        text-align: center;
 
         margin-top: 48px;
-        padding: 16px 0px 16px 65px;
+        padding-top: 16px;
+        padding-bottom: 16px;
 
+        transition: all 1s;
+
+        &:hover {
+            border: 1px solid rgb(0, 0, 0);
+            color: #000;
+            background-color: transparent;
+        }
+    }
+}
+
+.animation-line {
+    background-color: #BCEC30;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+
+    &__item {
+        color: rgb(32, 32, 39);
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 110%;
+        letter-spacing: 4%;
+        text-transform: uppercase;
+        list-style: none;
+        white-space: nowrap;
+        padding-left: 51px;
+        padding-top: 27px;
+        padding-bottom: 27px;
+
+        &::after {
+            content: url(img/star.svg);
+            padding-left: 51px;
+
+        }
     }
 }
 
 .main {
-
     background: url(img/star_11.svg) no-repeat 2% 54%, url(img/star_12.svg) no-repeat 3% 58%, url(img/star_1.svg) no-repeat right 12%;
     background-color: rgb(32, 32, 39);
-
 }
 
 .nav {
@@ -84,7 +114,6 @@ body {
         font-weight: 700;
         line-height: 78px;
         padding-top: 94px;
-
     }
 
     &__text {
@@ -95,6 +124,10 @@ body {
         margin-top: 24px;
         margin-bottom: 72px;
         max-width: 760px;
+
+        &::selection {
+            color: rgb(189, 237, 53);
+        }
     }
 
     &__menu {
@@ -107,11 +140,13 @@ body {
     &__game-cart {
         border-radius: 30px;
         background-color: #fff;
-        height: 551px;
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
-        align-self: flex-start;
+
+        &:hover {
+            transform: scale(1.1);
+        }
 
         &_top {
             height: 473px;
@@ -127,10 +162,9 @@ body {
         }
     }
 
-
-
     &__game-img {
         border-radius: 30px;
+        width: 100%;
     }
 
     &__game-number {
@@ -158,8 +192,6 @@ body {
         max-width: 300px;
         margin-left: 32px;
     }
-
-
 }
 
 .footer {
@@ -172,4 +204,90 @@ body {
     text-align: center;
     padding-top: 61px;
     padding-bottom: 61px;
+}
+
+
+
+@media (max-width: 1198px) {
+    .center {
+        padding-left: calc(50% - 786px/2);
+        padding-right: calc(50% - 786px/2);
+    }
+
+    .nav {
+
+        &__menu {
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+            justify-content: space-between;
+
+            flex-wrap: wrap;
+            row-gap: 29px;
+        }
+
+        &__game-cart {
+            height: 551px;
+            max-width: 365px;
+        }
+    }
+}
+
+@media (max-width: 833px) {
+    .center {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .nav {
+
+        &__game-cart {
+            height: 530px;
+            max-width: 343px;
+        }
+    }
+}
+
+@media (max-width: 757px) {
+    .center {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: url(img/mob_star_big.svg) no-repeat right top, url(img/mob_star_2.svg) no-repeat 18% 12%, url(img/mob_star_3.svg) no-repeat 32% 8%, url(img/mob_star_4.svg) no-repeat 85% 90%, url(img/mob_star_5.svg) no-repeat 75% 85%;
+        background-color: rgb(225, 255, 143);
+
+        &__heading {
+            font-size: 40px;
+            line-height: 49px;
+            text-align: center;
+            max-width: 250px;
+        }
+
+        &__text {
+            font-size: 16px;
+            line-height: 20px;
+            text-align: center;
+            max-width: 296px;
+
+        }
+
+        &__button {
+            width: 285px;
+            text-align: center;
+            font-size: 16px;
+            line-height: 141.69%;
+
+            align-content: center;
+        }
+
+    }
+
+    .nav {
+        display: none;
+    }
 }
